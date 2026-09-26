@@ -8,9 +8,6 @@ from torch_geometric.data import Data, Batch
 from torch_geometric.nn import SAGEConv, global_mean_pool
 import google.generativeai as genai
 
-with open("gemini.key", "r") as f:
-    os.environ["GEMINI_API_KEY"] = f.read().strip()
-
 # ---------------- CONFIG ----------------
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 MODEL_PATH = "model/ptbxl_gnn_hybrid_final.pth"

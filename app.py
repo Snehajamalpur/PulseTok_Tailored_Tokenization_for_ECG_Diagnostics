@@ -6,7 +6,7 @@ from werkzeug.utils import secure_filename
 from ECG_report import GNNHybrid, predict, generate_ecg_report, DEVICE, MODEL_PATH, NUM_CLASSES
 
 app = Flask(__name__)
-app.secret_key = 'unmyeong'
+app.secret_key = os.environ.get("FLASK_SECRET_KEY") or os.urandom(32)
 app.config['UPLOAD_FOLDER'] = "uploads"
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 

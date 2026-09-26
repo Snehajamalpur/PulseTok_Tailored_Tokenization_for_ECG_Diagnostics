@@ -1,0 +1,11 @@
+.env
+.env.*
+*.key
+database.db
+venv/
+__pycache__/
+*.py[cod]
+uploads/
+model/test/
+/model/PTB-XL_ECG_ds.ipynb
+.ipynb_checkpoints/
